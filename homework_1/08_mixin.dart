@@ -2,6 +2,7 @@ class Spacecraft {
   String name;
   DateTime? launchDate;
 
+  
   // Read-only non-final property
   int? get launchYear => launchDate?.year;
 
@@ -27,7 +28,28 @@ class Spacecraft {
   }
 }
 
+class Orbiter extends Spacecraft {
+  double altitude;
 
+  Orbiter(super.name, DateTime super.launchDate, this.altitude);
+}
+
+
+
+
+mixin Piloted {
+  int astronauts = 1;
+
+  void describeCrew() {
+    print('Number of astronauts: $astronauts');
+  }
+}
+
+class PilotedCraft extends Spacecraft with Piloted {
+  
+  PilotedCraft(String name, DateTime launchDate)
+      : super(name, launchDate);
+}
 void main(List<String> args) {
   var voyager = Spacecraft('Voyager I', DateTime(1977, 9, 5));
   voyager.describe();
