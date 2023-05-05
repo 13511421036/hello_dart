@@ -1,6 +1,11 @@
-if (astronauts == 0) {
+import 'dart:io';
+void main() {
+  var astronauts;
+  if(astronauts == 0) {
   throw StateError('No astronauts.');
 }
+}
+
 
 Future<void> describeFlybyObjects(List<String> flybyObjects) async {
   try {

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import '/workspaces/hello_dart1/homework_1/05_class.dart';
 
 const oneSecond = Duration(seconds: 1);
