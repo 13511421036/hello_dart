@@ -46,6 +46,7 @@ void main(List<String> args) {
 
   fruits3.add('apples');
   var fruit4 = fruits[0];
+  // ignore: unnecessary_type_check
   assert(fruit4 is String);
   fruits.add('5'); // Error: 'int' can't be assigned to 'String'
 
@@ -73,6 +74,7 @@ void main(List<String> args) {
 
   // You can also create sets using
   // one of the constructors.
+  // ignore: unused_local_variable
   var atomicNumbers = Set.from([79, 22, 54]);
 
   var ingredients1 = Set<String>();
@@ -106,10 +108,12 @@ void main(List<String> args) {
   };
 
   // Maps can be built from a constructor.
+  // ignore: unused_local_variable
   var searchTerms = Map();
 
   // Maps are parameterized types; you can specify what
   // types the key and value should be.
+  // ignore: unused_local_variable
   var nobleGases2 = Map<int, String>();
 
   var nobleGases1 = {54: 'xenon'};
@@ -175,6 +179,7 @@ void main(List<String> args) {
   var loudTeas = teas2.map((tea) => tea.toUpperCase());
   loudTeas.forEach(print);
 
+  // ignore: unused_local_variable
   var loudTeas1 = teas.map((tea) => tea.toUpperCase()).toList();
   var teas3 = ['green', 'black', 'chamomile', 'earl grey'];
 
@@ -183,6 +188,7 @@ void main(List<String> args) {
 
   // Use where() to find only the items that return true
   // from the provided function.
+  // ignore: unused_local_variable
   var decaffeinatedTeas = teas3.where((tea) => isDecaffeinated(tea));
   // or teas.where(isDecaffeinated)
 
