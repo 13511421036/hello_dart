@@ -20,6 +20,7 @@ class Processes extends IterableBase<Process> {
 
 void main() {
   // Iterable objects can be used with for-in.
+  // ignore: unused_local_variable
   for (final process in Processes()) {
     // Do something with the process.
   }

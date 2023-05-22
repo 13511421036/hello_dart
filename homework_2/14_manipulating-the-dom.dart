@@ -90,6 +90,7 @@ void main(List<String> args) {
   });
 
   document.body!.onClick.listen((e) {
+    // ignore: unused_local_variable
     final clickedElem = e.target;
     // ...
   });
